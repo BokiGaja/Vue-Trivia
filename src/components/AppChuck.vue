@@ -5,6 +5,8 @@
       <p>{{ joke.value }}</p>
       <a :href="joke.url"></a>
     </div>
+    <input type="text" v-model="jokeCategory" placeholder="Insert joke category">
+    <button @click="addJoke(jokeCategory)" class="btn btn-primary">Get a new joke</button>
   </div>
 </template>
 
@@ -14,6 +16,11 @@
 
   export default {
     name: "",
+    data() {
+      return {
+        jokeCategory: ''
+      }
+    },
     computed: {
       ...mapGetters([
         'jokes'
