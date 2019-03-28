@@ -6,12 +6,17 @@ const http = axios.create({
 
 
 export const ENDPOINTS = {
-    TRIVIA_RANDOM: 'random'
+    TRIVIA_RANDOM: 'random',
+    TRIVIA_CATEGORIES: 'categories',
+    TRIVIA_CLUES : 'clues'
 };
 
 class HttpService {
-    get(url, numberOfTrivia) {
-        return http.get(url+'?count='+numberOfTrivia)
+    get(url, type, numberOfTrivia) {
+        return http.get(url+'?'+type+'='+numberOfTrivia)
+    }
+    getCategory(url) {
+        return http.get(url);
     }
 
     post(url, body) {

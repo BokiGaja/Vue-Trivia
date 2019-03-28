@@ -1,22 +1,13 @@
 import {httpService} from "./HttpService";
-import {ENDPOINTS} from "./HttpService";
 
 class TriviaService {
-  getAll(url, numberOfTrivia) {
-    return httpService.get(url, numberOfTrivia);
+  getAll(url, type, numberOfTrivia) {
+    return httpService.get(url, type, numberOfTrivia);
   }
-  create(body) {
-    return httpService.post(ENDPOINTS, body)
+  getSome(category) {
+    return httpService.getCategory('clues/?category=' + category);
   }
-  get(id) {
-    return httpService.get(ENDPOINTS + id)
-  }
-  edit(id, body) {
-    return httpService.put(ENDPOINTS + '/' + id, body)
-  }
-  delete(id) {
-    return httpService.delete(ENDPOINTS + '/' + id);
-  }
+
 }
 
 export const triviaService = new TriviaService();
