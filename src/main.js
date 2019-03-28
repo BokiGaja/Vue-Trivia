@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import BootstrapVue from 'bootstrap-vue'
 import VueRouter from 'vue-router'
 
-import { router } from "./routes";
+import {router} from "./routes";
 
 Vue.use(BootstrapVue);
 Vue.use(VueRouter);
