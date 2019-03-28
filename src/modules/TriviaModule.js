@@ -16,7 +16,7 @@ export const triviaModule = {
     },
     addCategories(state, categories) {
       state.categories = [...categories]
-    }
+    },
   },
   actions: {
     async addTrivias({commit}, payload) {
@@ -30,6 +30,6 @@ export const triviaModule = {
     async filterCategory({commit}, category) {
       const {data} = await triviaService.getSome(category.target.value);
       commit('addTrivias', data);
-    }
+    },
   }
 };

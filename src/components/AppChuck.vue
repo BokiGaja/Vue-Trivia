@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <div v-for="joke in jokes" :key="joke.id">
-      <img :src="joke.icon_url" alt="">
+      <img :src="joke.iconUrl" alt="">
       <p>{{ joke.value }}</p>
-      <a :href="joke.url"></a>
+      <a :href="joke.sourceUrl" class="btn btn-success">Go to joke</a>
     </div>
     <input type="text" v-model="jokeCategory" placeholder="Insert joke category">
     <button @click="addJoke(jokeCategory)" class="btn btn-primary">Get a new joke</button>

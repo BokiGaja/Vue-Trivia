@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import {chuckModule} from "./ChuckModule";
-import {triviaModule} from "./TriviaModule";
+import {chuckModule} from "../modules/ChuckModule";
+import {triviaModule} from "../modules/TriviaModule";
 
 Vue.use(Vuex);
 

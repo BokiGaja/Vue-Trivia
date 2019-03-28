@@ -15,6 +15,7 @@ export const chuckModule = {
   actions: {
     async addJoke({commit}) {
       const response = await client.getRandomJoke();
+      console.log(response);
       commit('addJoke', response);
     }
   }
