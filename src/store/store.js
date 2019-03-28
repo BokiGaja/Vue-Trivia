@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
 import {chuckModule} from "./ChuckModule";
 import {triviaModule} from "./TriviaModule";
 
