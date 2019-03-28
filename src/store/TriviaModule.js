@@ -31,6 +31,5 @@ export const triviaModule = {
       const {data} = await triviaService.getSome(category.target.value);
       commit('addTrivias', data);
     }
-
   }
 };
