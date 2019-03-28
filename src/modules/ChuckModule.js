@@ -13,9 +13,8 @@ export const chuckModule = {
     }
   },
   actions: {
-    async addJoke({commit}) {
-      const response = await client.getRandomJoke();
-      console.log(response);
+    async addJoke({commit}, jokeCategory) {
+      const response = await client.getRandomJoke(jokeCategory);
       commit('addJoke', response);
     }
   }
