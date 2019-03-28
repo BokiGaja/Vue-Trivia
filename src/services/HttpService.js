@@ -1,16 +1,17 @@
 import axios from 'axios';
 
 const http = axios.create({
-   baseURL: 'http://localhost:3000'
+   baseURL: 'http://jservice.io/api/'
 });
 
 
 export const ENDPOINTS = {
+    TRIVIA_RANDOM: 'random'
 };
 
 class HttpService {
-    get(url) {
-        return http.get(url)
+    get(url, numberOfTrivia) {
+        return http.get(url+'?count='+numberOfTrivia)
     }
 
     post(url, body) {
